@@ -1,51 +1,54 @@
-package sec1;
+package sec2;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class TypeFun extends Object {
+public class TypeFun2 {
     public static void main(String[] args) {
-//        Object o = 5;
-//        System.out.println(o);
-////        Integer i = (Integer) o;
-//        if((int) o == 5) {
+//        Integer z = 5;
+//        int x = 5;
+//        Object a = 5;
+//        if((int) a == x) {
 //            System.out.println("samesies");
+//        } else {
+//            System.out.println("differentsies");
 //        }
-        Student s1 = new Student(5, "Darius");
-        Student s2 = new Student(6, "Matthias");
+        Student2 s1 = new Student2(5, "Jim Beam");
+        Student2 s2 = new Student2(6, "Jack Sparrow");
         System.out.println(s1);
         System.out.println(s2);
         System.out.println(s1.equals(s1));
-        System.out.println(s2.equals(s1));
+        System.out.println(s1.equals(s2));
 
-        ArrayList<Student> studentList = new ArrayList<>();
+        System.out.println();
+        ArrayList<Student2> studentList = new ArrayList<>();
         studentList.add(s1);
         studentList.add(s2);
         System.out.println(studentList);
 
-        System.out.println("regular for loop");
+        // simple for loop
+        System.out.println("\nfor loop");
         for(int i = 0; i < studentList.size(); i++) {
-            Student s = studentList.get(i);
+            Student2 s = studentList.get(i);
             System.out.println(s);
         }
 
         System.out.println("\nenhanced for loop");
-        for(Student s : studentList) {
+        for(Student2 s : studentList) {
             System.out.println(s);
         }
 
-        System.out.println("\ncontains");
         System.out.println(studentList.contains(s1));
-        System.out.println(studentList.contains(new Student(7, "hello")));
-        System.out.println(studentList.contains(new Student(6, "hello")));
+        System.out.println(studentList.contains(new Student2(7, "Bob Fern")));
+        System.out.println(studentList.contains(new Student2(6, "Bob Fern")));
     }
 }
 
-class Student {
-
+class Student2 {
     private int id;
     private String name;
 
-    public Student(int id, String name) {
+    public Student2(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -69,7 +72,7 @@ class Student {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Student student)) return false;
+        if (!(o instanceof Student2 student)) return false;
         return getId() == student.getId();
     }
 
