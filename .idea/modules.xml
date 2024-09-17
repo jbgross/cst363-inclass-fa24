@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/java-hw1/java-hw1.iml" filepath="$PROJECT_DIR$/java/java-hw1/java-hw1.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/sec2/sec2.iml" filepath="$PROJECT_DIR$/java/sec2/sec2.iml" />
       <module fileurl="file://$PROJECT_DIR$/sql/sql.iml" filepath="$PROJECT_DIR$/sql/sql.iml" />
     </modules>
