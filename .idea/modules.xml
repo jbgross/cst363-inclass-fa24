@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/java-hw1/java-hw1.iml" filepath="$PROJECT_DIR$/java/java-hw1/java-hw1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/sec1-hw1/sec1-hw1.iml" filepath="$PROJECT_DIR$/java/sec1-hw1/sec1-hw1.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/sec2/sec2.iml" filepath="$PROJECT_DIR$/java/sec2/sec2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/sec2-hw1/sec2-hw1.iml" filepath="$PROJECT_DIR$/java/sec2-hw1/sec2-hw1.iml" />
       <module fileurl="file://$PROJECT_DIR$/sql/sql.iml" filepath="$PROJECT_DIR$/sql/sql.iml" />
     </modules>
   </component>
