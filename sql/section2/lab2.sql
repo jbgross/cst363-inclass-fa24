@@ -22,16 +22,35 @@ WHERE
 	ID = 12399;
 
 -- 3. Give all faculty a 4% increase in salary
-update 3;
-
+UPDATE
+	instructor
+SET
+	-- salary = salary + salary * 0.04
+	salary = salary * 1.04
+WHERE
+	1=1;
+select name, salary from instructor;
 -- 4. Give all faculty in the Physics department a $3,500 salary increase
-update 4;
+UPDATE
+	instructor
+SET
+	salary = salary + 3500
+WHERE
+	dept_name = 'Physics';
 
 -- 5. try to delete the course 'PHY-101'
-delete 5;
-
+DELETE
+FROM
+	course
+WHERE
+	course_id = 'PHY-101';
+    
 -- 6. delete the course 'CS-315'
-delete 6;
+DELETE
+FROM
+	course
+WHERE
+	course_id = 'CS-315';
 
 -- 7. Why does the delete in #5 fail while #6 works?
 --     
@@ -40,13 +59,28 @@ delete 6;
 -- 8. Student 12399 enrolls into section 
 --    course_id 'CS-101', section 1, semester 'Fall', year 2009, grade null
 --    insert a row into the takes table for the enrollment
-insert 8;
-
+INSERT INTO takes
+	(ID, course_id, sec_id, semester, year, grade)
+VALUES
+	(12399, 'CS-101', 1, 'Fall', 2009, null);
+select * from section where course_id = 'CS-101';
+select * from takes where ID = 12399;
 -- 9.  Find all the rows in the takes table with a null grade.
 --      The answer should have 2 rows.
-select 9;
+SELECT
+	*
+FROM
+	takes
+WHERE
+	grade is null;
 
 -- 10.  Update the grade for student 12399 in 'CS-101' to 'A'. 
-update 10;
+UPDATE
+	takes
+SET
+	grade = 'A'
+WHERE
+-- 	ID = 12399 AND course_id = 'CS-101' AND semester = 'Fall' AND year = 2009;
+	(ID, course_id, semester, year) = (12399, 'CS-101', 'Fall', 2009);
 
 -- reset the course tables by rerunning the script file courses-small.sql 
